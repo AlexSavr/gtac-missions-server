@@ -1,0 +1,37 @@
+<meta>
+	<info author="AlexSavr" description="Basic mode for comfortable game with missions" />
+
+
+	<!-- Thanks Vortrex_essentials -->
+	<script src="./server/Vortrex_essentials.js" type="server" language="javascript" />
+	<script src="./client/Vortrex_essentials.js" type="client" language="javascript" />
+	<!--_______________-->
+
+	<!-- Server Scripts -->
+		<!-- Functions -->
+		<script src="./server/functions/database.js" type="server" language="javascript" />
+		<script src="./server/functions/findPlayer.js" type="server" language="javascript" />
+		<script src="./server/functions/SpawnPlayer.js" type="server" language="javascript" />
+		<!-- Init -->
+		<script src="server.js" type="server" language="javascript" />
+		<!-- Commands -->
+		<script src="./server/commands/armour.js" type="server" language="javascript" />
+		<script src="./server/commands/help.js" type="server" language="javascript" />
+		<script src="./server/commands/hp.js" type="server" language="javascript" />
+		<script src="./server/commands/money.js" type="server" language="javascript" />
+		<script src="./server/commands/settime.js" type="server" language="javascript" />
+		<script src="./server/commands/veh.js" type="server" language="javascript" />
+		<script src="./server/commands/wanted.js" type="server" language="javascript" />
+		<script src="./server/commands/register.js" type="server" language="javascript" />
+		<!-- Events -->
+		<script src="./server/events/onPed.js" type="server" language="javascript" />
+		<script src="./server/events/onPlayerJoined.js" type="server" language="javascript" />
+		<script src="./server/events/onPlayerSpawn.js" type="server" language="javascript" />
+		<script src="./server/events/onPlayerWasted.js" type="server" language="javascript" />
+
+	<!-- Client Scripts -->
+		<!-- Functions -->
+		<script src="./client/functions/getNearestVehicleInRange.js" type="client" language="javascript" />
+		<!-- Init -->
+		<script src="client.js" type="client" language="javascript" />
+</meta>
