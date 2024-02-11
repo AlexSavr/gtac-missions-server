@@ -5,6 +5,7 @@ const db = new module.sqlite.Database("server.db");
 var PlayerData = {};
 var OnlinePlayers = {};
 var ServerReady = false;
+var Vehicles = {};
 var GlobalConfig = {
 	NewCharacter: {
 		iiSkinID: 3,
@@ -18,5 +19,6 @@ var GlobalConfig = {
 
 bindEventHandler("OnResourceStart", thisResource, (event, resource) => {
 	InitDatabase();
+	setInterval(onTimeToSave, 2000);
 	ServerReady = true;
 });

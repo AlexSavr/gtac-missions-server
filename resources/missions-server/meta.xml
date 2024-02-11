@@ -35,6 +35,7 @@
 		<script src="./server/events/onPlayerJoined.js" type="server" language="javascript" />
 		<script src="./server/events/onPlayerSpawn.js" type="server" language="javascript" />
 		<script src="./server/events/onPlayerWasted.js" type="server" language="javascript" />
+		<script src="./server/events/onTimeToSave.js" type="server" language="javascript" />
 
 	<!-- Client Scripts -->
 		<!-- Functions -->
