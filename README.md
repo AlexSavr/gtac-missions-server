@@ -1,9 +1,10 @@
-# GTA:C Server (basis for GTA:SA)
+# GTA:Connected Server (basis for GTA:SA)
+Platform: [Grand Theft Auto Connected](https://gtaconnected.com/)
 
 ## Description
 The goal of this project is just to have fun and play with your online friends with a story in your favorite games. I am not going to support the project later. At the moment, while we play, I will fluff fixes, add-ons. To implement for someone any functionality I do not intend.
 ### P.S
-Resources, docs, examples big thanks to Vortrex and jack9267.
+BIG thanks for the Resources, docs, examples to [@VortrexFTW](https://github.com/VortrexFTW) and [@jack9267](https://github.com/jack9267/).
 
 ## Implemented
 - Save account and load after connecting
@@ -19,7 +20,7 @@ Resources, docs, examples big thanks to Vortrex and jack9267.
 - Vortrex's Essential Resources [releases](https://github.com/VortrexFTW/v-essentials)
 
 
-# GTA:C Сервер (пока что для GTA:SA)
+# GTA:Connectd Сервер (пока что для GTA:SA)
 
 ## Описание
 Целью данного проекта просто повеселиться и поиграть с друзьями по сети с сюжеткой в любимых играх. Поддерживать проект я не собираюсь позже. В данный момент пока мы играем, я буду пушить фиксы, дополнения. Реализовывать для кого-то какой-либо функционал я не намерен.
