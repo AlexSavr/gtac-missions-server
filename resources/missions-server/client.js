@@ -42,15 +42,16 @@ addNetworkHandler("setWantedLevel", function (level, notify = true) {
     }
 });
 
-// TODO: Enable after answer on issue in https://forum.gtaconnected.com/index.php/topic,407.0.html
-// addEventHandler("OnKeyDown", function (event, keyCode, scanCode, mod) {
-//     if (keyCode === SDLK_g) {
-//         message(`Player want seat. V: ${!!localPlayer.vehicle}`)
-//         if (!localPlayer.vehicle) {
-//             const v = GetNearestVehicleInRange(localPlayer.position);
-//             if (v !== null) {
-//                 localPlayer.enterVehicle(v, false);
-//             }
-//         }
-//     }
-// })
+// TODO: Replace warpIntoVehicle after answer on issue in https://forum.gtaconnected.com/index.php/topic,407.0.html
+addEventHandler("OnKeyDown", function (event, keyCode, scanCode, mod) {
+    if (keyCode === SDLK_g) {
+        message(`Player want seat. V: ${!!localPlayer.vehicle}`)
+        if (!localPlayer.vehicle) {
+            const v = GetNearestVehicleInRange(localPlayer.position);
+            if (v !== null) {
+                localPlayer.warpIntoVehicle(v, 2);
+                // localPlayer.enterVehicle(v, false);
+            }
+        }
+    }
+})
