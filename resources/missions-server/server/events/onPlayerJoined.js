@@ -3,7 +3,7 @@ addEventHandler("OnPlayerJoined", (event, client) => {
 	OnlinePlayers[client.index] = client;
 	console.log(`[OnPlayerJoined] ${client.name}[${client.index}]`);
 
-	createPlayerDataSlot(client.index, client.name);
+	CreatePlayerDataSlot(client.index, client.name);
 	const accountLoaded = LoadPlayerFromDatabase(client.index, client.name);
 
 	if(accountLoaded) {

@@ -2,7 +2,8 @@
 	<info author="AlexSavr" description="Basic mode for comfortable game with missions" />
 
 
-	<!-- Thanks Vortrex_essentials -->
+	<!--    Libraries   -->
+	<!-- Thanks Vortrex -->
 	<script src="./server/Vortrex_essentials.js" type="server" language="javascript" />
 	<script src="./client/Vortrex_essentials.js" type="client" language="javascript" />
 	<!--_______________-->
@@ -12,6 +13,7 @@
 		<script src="./server/functions/database.js" type="server" language="javascript" />
 		<script src="./server/functions/findPlayer.js" type="server" language="javascript" />
 		<script src="./server/functions/SpawnPlayer.js" type="server" language="javascript" />
+		<script src="./server/functions/CreatePlayerDataSlot.js" type="server" language="javascript" />
 		<!-- Init -->
 		<script src="server.js" type="server" language="javascript" />
 		<!-- Commands -->
@@ -23,6 +25,11 @@
 		<script src="./server/commands/veh.js" type="server" language="javascript" />
 		<script src="./server/commands/wanted.js" type="server" language="javascript" />
 		<script src="./server/commands/register.js" type="server" language="javascript" />
+		<script src="./server/commands/coords.js" type="server" language="javascript" />
+		<script src="./server/commands/giveWeapon.js" type="server" language="javascript" />
+		<script src="./server/commands/mission.js" type="server" language="javascript" />
+		<script src="./server/commands/skin.js" type="server" language="javascript" />
+		<script src="./server/commands/spawn.js" type="server" language="javascript" />
 		<!-- Events -->
 		<script src="./server/events/onPed.js" type="server" language="javascript" />
 		<script src="./server/events/onPlayerJoined.js" type="server" language="javascript" />
