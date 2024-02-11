@@ -30,17 +30,26 @@ function LoadPlayerFromDatabase(playerId, name) {
 		return false;
 	}
 	
-	const user = db.query(`SELECT * FROM accounts WHERE nickName = '${name}';`);
+	const user = db.query(`SELECT accountID, iSkinID, iMoney, isDead, iLastMissionID 
+							FROM accounts WHERE nickName = '${name}';`);
 
-	PlayerData[playerId] = user;
+	PlayerData[playerId] = {
+		...PlayerData[playerId],
+		accountID: user[0],
+		iSkinID: user[1],
+		iMoney: user[2],
+		isDead: user[3],
+		iLastMissionID: user[4]
+	};
 
-	return true;
+	return PlayerData[playerId];
 }
 
 
 function SavePlayerToDatabase(playerId) {
-	if(!playerId) return;
-	if(!PlayerData[playerId].nickName) return; 
+	if(typeof playerId !== 'number') return;
+
+	FetchActualPlayerData(playerId);
 	const user = PlayerData[playerId];
 	const dbIsExists = db.query(`SELECT COUNT(*) FROM accounts WHERE accountID = ${user.accountID}`);
 
@@ -70,6 +79,7 @@ function SavePlayerToDatabase(playerId) {
 	}
 	} catch (e) {
 		console.error(`[SAVE USER] ${e}`);
+		console.log(`[SAVE USER] Keys of user: ${Object.keys(user)}`);
 		return false;
 	}
 	return true;
@@ -81,8 +91,10 @@ function dbSelectIsExists(queryResult) {
 
 function SaveAllPlayersToDatabase() {
 	for(let i = 0 ; i < getPlayerCount(); i++) {
-		for(let client in OnlinePlayers) {
-			SavePlayerToDatabase(client.index);
+		for(let clientID in OnlinePlayers) {
+			const id = parseInt(clientID);
+			FetchActualPlayerData(id);
+			SavePlayerToDatabase(id);
 		}
 	}
 }

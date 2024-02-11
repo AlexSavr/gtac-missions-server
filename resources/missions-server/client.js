@@ -16,9 +16,11 @@ addNetworkHandler("setArmour", function (value) {
     message('ARMOOOUR!', COLOUR_GREEN);
 });
 
-addNetworkHandler("setMoney", function (value) {
+addNetworkHandler("setMoney", function (value, notify = true) {
     localPlayer.money = value;
-    message('[Success] You got the money!', COLOUR_GREEN);
+    if(notify) {
+        message('[Success] You got the money!', COLOUR_GREEN);
+    }
 });
 
 addNetworkHandler("ClientErrorMessage", function (message) {
@@ -29,13 +31,14 @@ addNetworkHandler("ClientMessage", function (message) {
     message(message, COLOUR_WHITE);
 });
 
-addNetworkHandler("setWantedLevel", function (level) {
+addNetworkHandler("setWantedLevel", function (level, notify = true) {
     localPlayer.wantedLevel = level;
-
-    if (level === 0) {
-        message('Wanted level cleared!', COLOUR_GREEN);
-    } else {
-        message('Setted wanted level!', COLOUR_GREEN);
+    if(notify) {
+        if (level === 0) {
+            message('Wanted level cleared!', COLOUR_GREEN);
+        } else {
+            message('Setted wanted level!', COLOUR_GREEN);
+        }
     }
 });
 

@@ -8,7 +8,7 @@ var ServerReady = false;
 var Vehicles = {};
 var GlobalConfig = {
 	NewCharacter: {
-		iiSkinID: 3,
+		iSkinID: 23,
 		fSpawnX: 2242,
 		fSpawnY: -1261,
 		fSpawnZ: 24,

@@ -14,6 +14,7 @@
 		<script src="./server/functions/findPlayer.js" type="server" language="javascript" />
 		<script src="./server/functions/SpawnPlayer.js" type="server" language="javascript" />
 		<script src="./server/functions/CreatePlayerDataSlot.js" type="server" language="javascript" />
+		<script src="./server/functions/FetchActualPlayerData.js" type="server" language="javascript" />
 		<!-- Init -->
 		<script src="server.js" type="server" language="javascript" />
 		<!-- Commands -->
@@ -42,4 +43,6 @@
 		<script src="./client/functions/getNearestVehicleInRange.js" type="client" language="javascript" />
 		<!-- Init -->
 		<script src="client.js" type="client" language="javascript" />
+		<!-- Events -->
+		<script src="./client/events/FetchData.js" type="client" language="javascript" />
 </meta>

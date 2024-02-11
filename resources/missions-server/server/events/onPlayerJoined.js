@@ -4,14 +4,15 @@ addEventHandler("OnPlayerJoined", (event, client) => {
 	console.log(`[OnPlayerJoined] ${client.name}[${client.index}]`);
 
 	CreatePlayerDataSlot(client.index, client.name);
-	const accountLoaded = LoadPlayerFromDatabase(client.index, client.name);
+	const userLoaded = LoadPlayerFromDatabase(client.index, client.name);
 
-	if(accountLoaded) {
-		messageClient(`The name, ${client.name} is already registered`, client, COLOUR_WHITE);
-		messageClient('Your account successful loaded!', client, COLOUR_WHITE);
+	if(userLoaded) {
+		messageClient(`Your account successful loaded! Hello, ${client.name}!`, client, COLOUR_WHITE);
+		triggerNetworkEvent("setMoney", client, userLoaded.iMoney, false);
 	} else {
 		messageClient(`The name, ${client.name} is NOT registered`, client, COLOUR_WHITE);
 		messageClient(`Use /register to create and save an account`, client, COLOUR_WHITE);
+		triggerNetworkEvent("setMoney", client, GlobalConfig.NewCharacter.iMoney, false);
 	}
 
 	SpawnPlayer(client);
